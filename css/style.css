@@ -766,5 +766,10 @@ hr {
   .gallery-carousel .item {
     padding: 0;
   }
+  /* to prevent refreshing the page when scrolling on chrome */
+  html,
+  body {
+    overscroll-behavior-y: contain;
+  }
 }
 /*# sourceMappingURL=style.css.map */
