@@ -190,11 +190,10 @@ $(document).ready(function () {
 		}
 	});
 	function slide_down() {
-		if (activeIndex <= menuItems.length - 1 && activeIndex > 0) {
-			activeIndex--;
+		if (activeIndex < menuItems.length - 1 && activeIndex >= 0) {
+			activeIndex++;
 			let index = activeIndex + 1;
 			let target = menuItems[activeIndex];
-			console.log(target);
 			if (target == "menu") {
 				return handleMenu(target);
 			}
@@ -202,10 +201,11 @@ $(document).ready(function () {
 		}
 	}
 	function slide_up() {
-		if (activeIndex < menuItems.length - 1 && activeIndex >= 0) {
-			activeIndex++;
+		if (activeIndex <= menuItems.length - 1 && activeIndex > 0) {
+			activeIndex--;
 			let index = activeIndex + 1;
 			let target = menuItems[activeIndex];
+			console.log(target);
 			if (target == "menu") {
 				return handleMenu(target);
 			}
