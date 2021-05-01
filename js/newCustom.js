@@ -134,9 +134,14 @@ $(document).ready(function () {
 		});
 	}
 	let allowScroll = true;
-	$("body").bind("mousewheel", function (e) {
+	var lastScrollTop = 0;
+
+	$(document.body).on("touchmove", onScroll);
+	function onScroll() {
 		if (!allowScroll) return;
-		if (e.originalEvent.wheelDelta > 10) {
+		var st = $(this).scrollTop();
+		if (st > lastScrollTop) {
+			// downscroll code
 			if (activeIndex <= menuItems.length - 1 && activeIndex > 0) {
 				activeIndex--;
 				let index = activeIndex + 1;
@@ -147,7 +152,8 @@ $(document).ready(function () {
 				}
 				activateItem(index, target);
 			}
-		} else if (e.originalEvent.wheelDelta < -10) {
+		} else {
+			// upscroll code
 			if (activeIndex < menuItems.length - 1 && activeIndex >= 0) {
 				activeIndex++;
 				let index = activeIndex + 1;
@@ -158,11 +164,42 @@ $(document).ready(function () {
 				activateItem(index, target);
 			}
 		}
+		lastScrollTop = st;
 		allowScroll = false;
 		setTimeout(() => {
 			allowScroll = true;
 		}, 600);
-	});
+	}
+
+	// $("body").bind("mousewheel", function (e) {
+	// 	if (!allowScroll) return;
+	// 	if (e.originalEvent.wheelDelta > 10) {
+	// 		if (activeIndex <= menuItems.length - 1 && activeIndex > 0) {
+	// 			activeIndex--;
+	// 			let index = activeIndex + 1;
+	// 			let target = menuItems[activeIndex];
+	// 			console.log(target);
+	// 			if (target == "menu") {
+	// 				return handleMenu(target);
+	// 			}
+	// 			activateItem(index, target);
+	// 		}
+	// 	} else if (e.originalEvent.wheelDelta < -10) {
+	// 		if (activeIndex < menuItems.length - 1 && activeIndex >= 0) {
+	// 			activeIndex++;
+	// 			let index = activeIndex + 1;
+	// 			let target = menuItems[activeIndex];
+	// 			if (target == "menu") {
+	// 				return handleMenu(target);
+	// 			}
+	// 			activateItem(index, target);
+	// 		}
+	// 	}
+	// 	allowScroll = false;
+	// 	setTimeout(() => {
+	// 		allowScroll = true;
+	// 	}, 600);
+	// });
 
 	$(".discor-link").click(function (e) {
 		e.preventDefault();
