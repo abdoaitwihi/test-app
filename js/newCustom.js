@@ -136,39 +136,81 @@ $(document).ready(function () {
 	let allowScroll = true;
 	var lastScrollTop = 0;
 
-	$(document.body).on("touchmove", onScroll);
-	function onScroll() {
-		if (!allowScroll) return;
-		var st = $(this).scrollTop();
-		if (st > lastScrollTop) {
-			// downscroll code
-			if (activeIndex <= menuItems.length - 1 && activeIndex > 0) {
-				activeIndex--;
-				let index = activeIndex + 1;
-				let target = menuItems[activeIndex];
-				console.log(target);
-				if (target == "menu") {
-					return handleMenu(target);
-				}
-				activateItem(index, target);
-			}
-		} else {
-			// upscroll code
-			if (activeIndex < menuItems.length - 1 && activeIndex >= 0) {
-				activeIndex++;
-				let index = activeIndex + 1;
-				let target = menuItems[activeIndex];
-				if (target == "menu") {
-					return handleMenu(target);
-				}
-				activateItem(index, target);
-			}
+	// $(document.body).on("touchmove", onScroll);
+	// function onScroll() {
+	// 	if (!allowScroll) return;
+	// 	var st = $(this).scrollTop();
+	// 	if (st > lastScrollTop) {
+	// 		// downscroll code
+	// 		if (activeIndex <= menuItems.length - 1 && activeIndex > 0) {
+	// 			activeIndex--;
+	// 			let index = activeIndex + 1;
+	// 			let target = menuItems[activeIndex];
+	// 			console.log(target);
+	// 			if (target == "menu") {
+	// 				return handleMenu(target);
+	// 			}
+	// 			activateItem(index, target);
+	// 		}
+	// 	} else {
+	// 		// upscroll code
+	// 		if (activeIndex < menuItems.length - 1 && activeIndex >= 0) {
+	// 			activeIndex++;
+	// 			let index = activeIndex + 1;
+	// 			let target = menuItems[activeIndex];
+	// 			if (target == "menu") {
+	// 				return handleMenu(target);
+	// 			}
+	// 			activateItem(index, target);
+	// 		}
+	// 	}
+	// 	lastScrollTop = st;
+	// 	allowScroll = false;
+	// 	setTimeout(() => {
+	// 		allowScroll = true;
+	// 	}, 600);
+	// }
+	$("body").scroll(function () {
+		console.log("hi");
+	});
+
+	/* -========another solution */
+
+	var ts;
+	$(document).bind("touchstart", function (e) {
+		ts = e.originalEvent.touches[0].clientY;
+	});
+
+	$(document).bind("touchend", function (e) {
+		var te = e.originalEvent.changedTouches[0].clientY;
+		if (ts > te + 5) {
+			slide_down();
+		} else if (ts < te - 5) {
+			slide_up();
 		}
-		lastScrollTop = st;
-		allowScroll = false;
-		setTimeout(() => {
-			allowScroll = true;
-		}, 600);
+	});
+	function slide_down() {
+		if (activeIndex <= menuItems.length - 1 && activeIndex > 0) {
+			activeIndex--;
+			let index = activeIndex + 1;
+			let target = menuItems[activeIndex];
+			console.log(target);
+			if (target == "menu") {
+				return handleMenu(target);
+			}
+			activateItem(index, target);
+		}
+	}
+	function slide_up() {
+		if (activeIndex < menuItems.length - 1 && activeIndex >= 0) {
+			activeIndex++;
+			let index = activeIndex + 1;
+			let target = menuItems[activeIndex];
+			if (target == "menu") {
+				return handleMenu(target);
+			}
+			activateItem(index, target);
+		}
 	}
 
 	// $("body").bind("mousewheel", function (e) {
