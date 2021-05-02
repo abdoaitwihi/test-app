@@ -195,9 +195,9 @@ $(document).ready(function () {
 
 	$(document).bind("touchend", function (e) {
 		var te = e.originalEvent.changedTouches[0].clientY;
-		if (ts > te + 25) {
+		if (ts > te + 125) {
 			slide_down();
-		} else if (ts < te - 25) {
+		} else if (ts < te - 125) {
 			slide_up();
 		}
 	});
