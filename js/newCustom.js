@@ -255,6 +255,12 @@ $(document).ready(function () {
 		}, 600);
 	});
 
+	/* show menu on mobile when clicking on the icon at the top */
+	$(".company-holder").click(function (e) {
+		e.preventDefault();
+		handleMenu("menu");
+	});
+
 	$(".discor-link").click(function (e) {
 		e.preventDefault();
 	});
