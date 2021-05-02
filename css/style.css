@@ -599,8 +599,8 @@ hr {
             transform: rotate(0deg);
   }
   #gallery .mobile-icon.final-position {
-    -webkit-animation: animateGalleryIcon 0.7s forwards ease-out;
-            animation: animateGalleryIcon 0.7s forwards ease-out;
+    -webkit-animation: animateGalleryIcon 0.5s forwards ease-out;
+            animation: animateGalleryIcon 0.5s forwards ease-out;
   }
   @-webkit-keyframes animateGalleryIcon {
     0% {
@@ -642,8 +642,8 @@ hr {
             transform: rotate(0deg) translateX(0%);
   }
   #clients .mobile-icon.final-position {
-    -webkit-animation: animateClientsIcon 0.7s forwards ease-out;
-            animation: animateClientsIcon 0.7s forwards ease-out;
+    -webkit-animation: animateClientsIcon 0.5s forwards ease-out;
+            animation: animateClientsIcon 0.5s forwards ease-out;
   }
   @-webkit-keyframes animateClientsIcon {
     0% {
@@ -685,8 +685,8 @@ hr {
             transform: rotate(0deg);
   }
   #contact .mobile-icon.final-position {
-    -webkit-animation: animateContactIcon 0.7s forwards ease-out;
-            animation: animateContactIcon 0.7s forwards ease-out;
+    -webkit-animation: animateContactIcon 0.5s forwards ease-out;
+            animation: animateContactIcon 0.5s forwards ease-out;
   }
   @-webkit-keyframes animateContactIcon {
     0% {
@@ -728,8 +728,8 @@ hr {
             transform: rotate(0deg);
   }
   #about-us .mobile-icon.final-position {
-    -webkit-animation: animateAboutUsIcon 0.7s forwards ease-out;
-            animation: animateAboutUsIcon 0.7s forwards ease-out;
+    -webkit-animation: animateAboutUsIcon 0.5s forwards ease-out;
+            animation: animateAboutUsIcon 0.5s forwards ease-out;
   }
   @-webkit-keyframes animateAboutUsIcon {
     0% {

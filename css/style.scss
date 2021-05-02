@@ -460,7 +460,7 @@ hr {
 			opacity: 0;
 			transform: rotate(0deg);
 			&.final-position {
-				animation: animateGalleryIcon 0.7s forwards ease-out;
+				animation: animateGalleryIcon 0.5s forwards ease-out;
 			}
 		}
 	}
@@ -486,7 +486,7 @@ hr {
 			opacity: 0;
 			transform: rotate(0deg) translateX(0%);
 			&.final-position {
-				animation: animateClientsIcon 0.7s forwards ease-out;
+				animation: animateClientsIcon 0.5s forwards ease-out;
 			}
 		}
 	}
@@ -512,7 +512,7 @@ hr {
 			opacity: 0;
 			transform: rotate(0deg);
 			&.final-position {
-				animation: animateContactIcon 0.7s forwards ease-out;
+				animation: animateContactIcon 0.5s forwards ease-out;
 			}
 		}
 	}
@@ -538,7 +538,7 @@ hr {
 			opacity: 0;
 			transform: rotate(0deg);
 			&.final-position {
-				animation: animateAboutUsIcon 0.7s forwards ease-out;
+				animation: animateAboutUsIcon 0.5s forwards ease-out;
 			}
 		}
 	}
