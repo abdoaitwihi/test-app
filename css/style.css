@@ -821,6 +821,9 @@ hr {
     max-width: 70px;
     max-height: 70px;
   }
+  .menu-item {
+    height: 85px;
+  }
   .menu-item img {
     max-width: 95px;
     max-height: 95px;
