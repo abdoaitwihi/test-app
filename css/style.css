@@ -332,7 +332,7 @@ a:hover {
 
 .gallery-carousel .owl-nav {
   position: absolute;
-  top: 339px;
+  top: 300px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -390,7 +390,7 @@ hr {
 
 .about-us {
   font-weight: 20px;
-  padding: 10px 2rem;
+  padding: 10px 1rem;
 }
 
 .conpany-image {
@@ -568,11 +568,11 @@ hr {
               transform: rotate(0deg);
     }
     100% {
-      top: -7%;
-      right: 37%;
+      top: -12%;
+      right: 50%;
       opacity: 1;
-      -webkit-transform: rotate(110deg);
-              transform: rotate(110deg);
+      -webkit-transform: rotate(20deg) translateX(57%);
+              transform: rotate(20deg) translateX(57%);
     }
   }
   @keyframes animateServiceIcon {
@@ -584,11 +584,11 @@ hr {
               transform: rotate(0deg);
     }
     100% {
-      top: -7%;
-      right: 37%;
+      top: -12%;
+      right: 50%;
       opacity: 1;
-      -webkit-transform: rotate(110deg);
-              transform: rotate(110deg);
+      -webkit-transform: rotate(20deg) translateX(57%);
+              transform: rotate(20deg) translateX(57%);
     }
   }
   #gallery .mobile-icon {
@@ -611,11 +611,11 @@ hr {
               transform: rotate(0deg);
     }
     100% {
-      top: -4%;
-      right: 42%;
+      top: -8%;
+      right: 50%;
       opacity: 1;
-      -webkit-transform: rotate(131deg);
-              transform: rotate(131deg);
+      -webkit-transform: rotate(12deg) translateX(50%);
+              transform: rotate(12deg) translateX(50%);
     }
   }
   @keyframes animateGalleryIcon {
@@ -627,19 +627,19 @@ hr {
               transform: rotate(0deg);
     }
     100% {
-      top: -4%;
-      right: 42%;
+      top: -8%;
+      right: 50%;
       opacity: 1;
-      -webkit-transform: rotate(131deg);
-              transform: rotate(131deg);
+      -webkit-transform: rotate(12deg) translateX(50%);
+              transform: rotate(12deg) translateX(50%);
     }
   }
   #clients .mobile-icon {
     top: 73%;
     right: 95%;
     opacity: 0;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotate(0deg) translateX(0%);
+            transform: rotate(0deg) translateX(0%);
   }
   #clients .mobile-icon.final-position {
     -webkit-animation: animateClientsIcon 0.7s forwards ease-out;
@@ -650,15 +650,15 @@ hr {
       top: 73%;
       right: 95%;
       opacity: 0.3;
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
+      -webkit-transform: rotate(0deg) translateX(0%);
+              transform: rotate(0deg) translateX(0%);
     }
     100% {
-      top: -7%;
-      right: 37%;
+      top: -8%;
+      right: 50%;
       opacity: 1;
-      -webkit-transform: rotate(131deg);
-              transform: rotate(131deg);
+      -webkit-transform: rotate(0deg) translateX(50%);
+              transform: rotate(0deg) translateX(50%);
     }
   }
   @keyframes animateClientsIcon {
@@ -666,15 +666,15 @@ hr {
       top: 73%;
       right: 95%;
       opacity: 0.3;
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
+      -webkit-transform: rotate(0deg) translateX(0%);
+              transform: rotate(0deg) translateX(0%);
     }
     100% {
-      top: -7%;
-      right: 37%;
+      top: -8%;
+      right: 50%;
       opacity: 1;
-      -webkit-transform: rotate(131deg);
-              transform: rotate(131deg);
+      -webkit-transform: rotate(0deg) translateX(50%);
+              transform: rotate(0deg) translateX(50%);
     }
   }
   #contact .mobile-icon {
@@ -771,5 +771,34 @@ hr {
   body {
     overscroll-behavior-y: contain;
   }
+  .carousel-vedio {
+    height: 180px !important;
+  }
+  .gallery-carousel .owl-nav {
+    top: 200px;
+  }
+  .about-us {
+    padding: 10px 0.3rem;
+  }
+  .single-service h2 {
+    margin-top: 0.4rem;
+    font-size: 16px;
+  }
+  .single-service p {
+    font-size: 12px;
+    margin-bottom: 0.1rem;
+  }
+  #about-us {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  #gallery {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.carousel-vedio {
+  height: 280px;
 }
 /*# sourceMappingURL=style.css.map */

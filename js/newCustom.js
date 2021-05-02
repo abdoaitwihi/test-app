@@ -1,4 +1,7 @@
 $(document).ready(function () {
+	var windowsize = $(window).width();
+	let isMobile = windowsize < 992 ? true : false;
+
 	function addStateOne() {
 		for (let index = 1; index < 7; index++) {
 			$(`.menu-item-${index}`).addClass(`animated-state-${index}`);
@@ -73,9 +76,16 @@ $(document).ready(function () {
 	$(".menu-item-link").click(function (e) {
 		e.preventDefault();
 	});
+
+	let owlStagePdadding = 0;
+	if (isMobile) {
+		owlStagePdadding = 20;
+	} else {
+		owlStagePdadding = 50;
+	}
 	/* trigering the slick */
 	$(".gallery-carousel").owlCarousel({
-		stagePadding: 50,
+		stagePadding: owlStagePdadding,
 		loop: true,
 		margin: 10,
 		nav: true,
@@ -92,6 +102,10 @@ $(document).ready(function () {
 				items: 1,
 			},
 		},
+		mouseDrag: true,
+		touchDrag: true,
+		pullDrag: true,
+		freeDrag: true,
 	});
 	/* ==================scroll handling=============================== */
 
@@ -104,8 +118,6 @@ $(document).ready(function () {
 		"contact",
 		"about-us",
 	];
-	var windowsize = $(window).width();
-	let isMobile = windowsize < 992 ? true : false;
 	if (isMobile) {
 		menuItems = [
 			"home",
@@ -213,35 +225,35 @@ $(document).ready(function () {
 		}
 	}
 
-	// $("body").bind("mousewheel", function (e) {
-	// 	if (!allowScroll) return;
-	// 	if (e.originalEvent.wheelDelta > 10) {
-	// 		if (activeIndex <= menuItems.length - 1 && activeIndex > 0) {
-	// 			activeIndex--;
-	// 			let index = activeIndex + 1;
-	// 			let target = menuItems[activeIndex];
-	// 			console.log(target);
-	// 			if (target == "menu") {
-	// 				return handleMenu(target);
-	// 			}
-	// 			activateItem(index, target);
-	// 		}
-	// 	} else if (e.originalEvent.wheelDelta < -10) {
-	// 		if (activeIndex < menuItems.length - 1 && activeIndex >= 0) {
-	// 			activeIndex++;
-	// 			let index = activeIndex + 1;
-	// 			let target = menuItems[activeIndex];
-	// 			if (target == "menu") {
-	// 				return handleMenu(target);
-	// 			}
-	// 			activateItem(index, target);
-	// 		}
-	// 	}
-	// 	allowScroll = false;
-	// 	setTimeout(() => {
-	// 		allowScroll = true;
-	// 	}, 600);
-	// });
+	$("body").bind("mousewheel", function (e) {
+		if (!allowScroll) return;
+		if (e.originalEvent.wheelDelta > 10) {
+			if (activeIndex <= menuItems.length - 1 && activeIndex > 0) {
+				activeIndex--;
+				let index = activeIndex + 1;
+				let target = menuItems[activeIndex];
+				console.log(target);
+				if (target == "menu") {
+					return handleMenu(target);
+				}
+				activateItem(index, target);
+			}
+		} else if (e.originalEvent.wheelDelta < -10) {
+			if (activeIndex < menuItems.length - 1 && activeIndex >= 0) {
+				activeIndex++;
+				let index = activeIndex + 1;
+				let target = menuItems[activeIndex];
+				if (target == "menu") {
+					return handleMenu(target);
+				}
+				activateItem(index, target);
+			}
+		}
+		allowScroll = false;
+		setTimeout(() => {
+			allowScroll = true;
+		}, 600);
+	});
 
 	$(".discor-link").click(function (e) {
 		e.preventDefault();
