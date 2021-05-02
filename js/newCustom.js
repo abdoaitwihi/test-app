@@ -89,7 +89,7 @@ $(document).ready(function () {
 		loop: true,
 		margin: 10,
 		nav: true,
-		navSpeed: 1000,
+		navSpeed: 1600,
 		navText: ["<", ">"],
 		responsive: {
 			0: {
@@ -105,7 +105,6 @@ $(document).ready(function () {
 		mouseDrag: true,
 		touchDrag: true,
 		pullDrag: true,
-		freeDrag: true,
 	});
 	/* ==================scroll handling=============================== */
 
