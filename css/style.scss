@@ -446,7 +446,7 @@ hr {
 			transform: rotate(0deg);
 		}
 		100% {
-			top: -12%;
+			top: -8%;
 			right: 50%;
 			opacity: 1;
 			transform: rotate(20deg) translateX(57%);
@@ -498,7 +498,7 @@ hr {
 			transform: rotate(0deg) translateX(0%);
 		}
 		100% {
-			top: -8%;
+			top: -4%;
 			right: 50%;
 			opacity: 1;
 			transform: rotate(0deg) translateX(50%);
@@ -527,7 +527,7 @@ hr {
 			top: -4%;
 			right: 44%;
 			opacity: 1;
-			transform: rotate(82deg);
+			transform: rotate(80deg) translateX(50%);
 		}
 	}
 	//========about-us icon ================//
@@ -614,6 +614,13 @@ hr {
 		p {
 			font-size: 12px;
 		}
+	}
+	.thanks-message {
+		font-size: 12px;
+	}
+	.mobile-icon {
+		max-width: 70px;
+		max-height: 70px;
 	}
 }
 .carousel-vedio {
