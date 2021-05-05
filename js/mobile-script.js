@@ -115,7 +115,7 @@ $(document).ready(function () {
 		stagePadding: 20,
 		loop: true,
 		margin: 10,
-		nav: true,
+		nav: false,
 		navSpeed: 1600,
 		navText: ["<", ">"],
 		responsive: {

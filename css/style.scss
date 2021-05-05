@@ -247,23 +247,23 @@ a:hover {
 	font-weight: 100;
 	transition: 0.3s;
 }
-.single-service {
-	h2 {
-		font-weight: bold;
-		margin-top: 1rem;
-		font-size: 20px;
-		padding-left: 20px;
-		&::before {
-			content: "";
-			width: 7px;
-			height: 7px;
-			background-color: black;
-			display: block;
-			transform: translate(-12px, 16px);
-			border-radius: 50%;
-		}
-	}
-}
+// .single-service {
+// 	h2 {
+// 		font-weight: bold;
+// 		margin-top: 1rem;
+// 		font-size: 20px;
+// 		padding-left: 20px;
+// 		&::before {
+// 			content: "";
+// 			width: 7px;
+// 			height: 7px;
+// 			background-color: black;
+// 			display: block;
+// 			transform: translate(-12px, 16px);
+// 			border-radius: 50%;
+// 		}
+// 	}
+// }
 
 .gallery-carousel {
 	.item {
@@ -422,12 +422,13 @@ hr {
 		position: fixed;
 		bottom: 12px;
 		left: 12px;
+		z-index: 333;
 	}
 	.section {
 		position: fixed;
 		width: 100%;
-		height: calc(100vh - 17vh);
-		margin-top: 17vh;
+		height: calc(100vh - 13vh);
+		margin-top: 13vh;
 	}
 	.home-section {
 		position: fixed;
@@ -475,7 +476,7 @@ hr {
 		}
 		&.active {
 			img {
-				top: -116px;
+				top: -135px;
 				right: 50%;
 				transform: translateX(71%) rotate(20deg);
 				opacity: 1;
@@ -492,7 +493,7 @@ hr {
 		}
 		&.active {
 			img {
-				top: -215px;
+				top: -236px;
 				right: 50%;
 				transform: translateX(84%) rotate(13deg);
 				opacity: 1;
@@ -509,7 +510,7 @@ hr {
 		}
 		&.active {
 			img {
-				top: -327px;
+				top: -348px;
 				right: 50%;
 				transform: translateX(50%);
 				opacity: 1;
@@ -526,7 +527,7 @@ hr {
 		}
 		&.active {
 			img {
-				top: -400px;
+				top: -421px;
 				right: 50%;
 				transform: translateX(50%) rotate(80deg);
 			}
@@ -542,7 +543,7 @@ hr {
 		}
 		&.active {
 			img {
-				top: -500px;
+				top: -521px;
 				right: 50%;
 				transform: translateX(125%) rotate(175deg);
 			}
@@ -566,8 +567,48 @@ hr {
 	}
 
 	.clients-images {
+		.col-md-6 {
+			text-align: center;
+		}
 		img {
-			width: 100%;
+			max-width: 135px;
+		}
+	}
+	.section {
+		h2 {
+			font-size: 24px;
+		}
+	}
+	.single-service {
+		h2 {
+			font-size: 17px;
+			li {
+				list-style: outside;
+			}
+		}
+		p {
+			font-size: 14px;
+		}
+	}
+	#contact {
+		.form-group {
+			margin-bottom: 0.3rem;
+		}
+		.col-form-label {
+			font-size: 15px;
+		}
+		.contact-info {
+			font-size: 15px;
+		}
+		.social-icons {
+			img {
+				width: 40px;
+			}
+		}
+	}
+	#about-us {
+		.about-us {
+			font-size: 15px;
 		}
 	}
 }

@@ -307,24 +307,6 @@ a:hover {
   transition: 0.3s;
 }
 
-.single-service h2 {
-  font-weight: bold;
-  margin-top: 1rem;
-  font-size: 20px;
-  padding-left: 20px;
-}
-
-.single-service h2::before {
-  content: "";
-  width: 7px;
-  height: 7px;
-  background-color: black;
-  display: block;
-  -webkit-transform: translate(-12px, 16px);
-          transform: translate(-12px, 16px);
-  border-radius: 50%;
-}
-
 .gallery-carousel .item {
   width: 100%;
   text-align: center;
@@ -543,12 +525,13 @@ hr {
     position: fixed;
     bottom: 12px;
     left: 12px;
+    z-index: 333;
   }
   .section {
     position: fixed;
     width: 100%;
-    height: calc(100vh - 17vh);
-    margin-top: 17vh;
+    height: calc(100vh - 13vh);
+    margin-top: 13vh;
   }
   .home-section {
     position: fixed;
@@ -585,7 +568,7 @@ hr {
     opacity: 0;
   }
   .menu-item-2.active img {
-    top: -116px;
+    top: -135px;
     right: 50%;
     -webkit-transform: translateX(71%) rotate(20deg);
             transform: translateX(71%) rotate(20deg);
@@ -597,7 +580,7 @@ hr {
     opacity: 0;
   }
   .menu-item-3.active img {
-    top: -215px;
+    top: -236px;
     right: 50%;
     -webkit-transform: translateX(84%) rotate(13deg);
             transform: translateX(84%) rotate(13deg);
@@ -609,7 +592,7 @@ hr {
     opacity: 0;
   }
   .menu-item-4.active img {
-    top: -327px;
+    top: -348px;
     right: 50%;
     -webkit-transform: translateX(50%);
             transform: translateX(50%);
@@ -621,7 +604,7 @@ hr {
     opacity: 0;
   }
   .menu-item-5.active img {
-    top: -400px;
+    top: -421px;
     right: 50%;
     -webkit-transform: translateX(50%) rotate(80deg);
             transform: translateX(50%) rotate(80deg);
@@ -632,7 +615,7 @@ hr {
     opacity: 0;
   }
   .menu-item-6.active img {
-    top: -500px;
+    top: -521px;
     right: 50%;
     -webkit-transform: translateX(125%) rotate(175deg);
             transform: translateX(125%) rotate(175deg);
@@ -651,8 +634,38 @@ hr {
   .gallery-carousel .owl-nav {
     top: 200px;
   }
+  .clients-images .col-md-6 {
+    text-align: center;
+  }
   .clients-images img {
-    width: 100%;
+    max-width: 135px;
+  }
+  .section h2 {
+    font-size: 24px;
+  }
+  .single-service h2 {
+    font-size: 17px;
+  }
+  .single-service h2 li {
+    list-style: outside;
+  }
+  .single-service p {
+    font-size: 14px;
+  }
+  #contact .form-group {
+    margin-bottom: 0.3rem;
+  }
+  #contact .col-form-label {
+    font-size: 15px;
+  }
+  #contact .contact-info {
+    font-size: 15px;
+  }
+  #contact .social-icons img {
+    width: 40px;
+  }
+  #about-us .about-us {
+    font-size: 15px;
   }
 }
 /*# sourceMappingURL=style.css.map */
