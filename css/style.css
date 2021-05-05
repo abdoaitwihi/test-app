@@ -487,7 +487,7 @@ hr {
   #home.not-active {
     width: 80px !important;
     height: 40px;
-    top: 0;
+    top: 012px;
     right: 0;
   }
   #home.not-active .company-name {
@@ -666,6 +666,22 @@ hr {
   }
   #about-us .about-us {
     font-size: 15px;
+  }
+  .company-holder {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 /*# sourceMappingURL=style.css.map */

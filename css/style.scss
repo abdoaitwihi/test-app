@@ -396,7 +396,7 @@ hr {
 		&.not-active {
 			width: 80px !important;
 			height: 40px;
-			top: 0;
+			top: 012px;
 			right: 0;
 			.company-name {
 				font-size: 0px;
@@ -610,5 +610,12 @@ hr {
 		.about-us {
 			font-size: 15px;
 		}
+	}
+	.company-holder {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
 	}
 }
