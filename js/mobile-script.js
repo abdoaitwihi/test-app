@@ -133,4 +133,17 @@ $(document).ready(function () {
 		touchDrag: true,
 		pullDrag: true,
 	});
+
+	/* ============form submition */
+	$(".submit-btn").click(function (e) {
+		e.preventDefault();
+		$(".error-message").hide();
+		if ($("#message").val() && $("#email").val() && $("#email").val()) {
+			$(".error-message").slideUp();
+			$(".thanks-message").slideDown();
+			$("form").css("opacity", "0");
+		} else {
+			$(".error-message").slideDown();
+		}
+	});
 });
